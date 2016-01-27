@@ -23,5 +23,10 @@ class MiCelda: UITableViewCell {
 
     @IBOutlet weak var titulo: UILabel!
     @IBOutlet weak var subtitulo: UILabel!
+    @IBOutlet weak var subtitulo2: UILabel!
+    @IBOutlet weak var subtitulo3: UILabel!
     @IBOutlet weak var imagen: UIImageView!
+    @IBOutlet weak var ciudad: UILabel!
+    @IBOutlet weak var estado: UILabel!
+    @IBOutlet weak var fecha: UILabel!
 }

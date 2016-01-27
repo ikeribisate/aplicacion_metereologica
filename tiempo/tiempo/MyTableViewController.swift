@@ -61,7 +61,7 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
     {
         posts = []
         
-        let url: NSURL! = NSBundle.mainBundle().URLForResource("localidad_01059_full", withExtension: "xml")
+        let url: NSURL! = NSBundle.mainBundle().URLForResource("localidad_01059", withExtension: "xml")
         //let url = NSURL(string: "http://www.aemet.es/xml/municipios/localidad_01059.xml")
         
         //let url = NSURL(string: "http://images.apple.com/main/rss/hotnews/hotnews.rss")
@@ -118,7 +118,7 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
                 (elementName as NSString).isEqualToString("cota_nieve_prov")    ||
                 (elementName as NSString).isEqualToString("estado_cielo")
         {
-            periodo="00-24"
+            periodo="18-24"
             //periodo=attributeDict["periodo"]!
             //if !attributeDict["periodo"]!.isEqual(nil){
             //    periodo=attributeDict["periodo"]!
@@ -128,7 +128,7 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
             //    periodo=attributeDict["periodo"]!  // no funcionasiempre es nill
             //}
             
-            if (elementName as NSString).isEqualToString("estado_cielo") && (periodo == "00-24") {
+            if (elementName as NSString).isEqualToString("estado_cielo") && (periodo == "18-24") {
                 cielo_d=attributeDict["descripcion"]!
                 //cielo_des.appendString(attributeDict["descripcion"]!)
             }
@@ -217,11 +217,11 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
     {
         
         
-        if element.isEqualToString("prob_precipitacion") && (periodo == "00-24"){
+        if element.isEqualToString("prob_precipitacion") && (periodo == "18-24"){
             lluvia.appendString(string)
-        } else if element.isEqualToString("cota_nieve_prov") && (periodo == "00-24"){
+        } else if element.isEqualToString("cota_nieve_prov") && (periodo == "18-24"){
             nieve.appendString(string)
-        } else if element.isEqualToString("estado_cielo") && (periodo == "00-24"){
+        } else if element.isEqualToString("estado_cielo") && (periodo == "18-24"){
             cielo.appendString(string)
             cielo_des.appendString(cielo_d)
             cielo_d=""
@@ -289,9 +289,15 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
         if indexPath.row == 0 {
         let cell = tableView.dequeueReusableCellWithIdentifier("MiCelda", forIndexPath: indexPath) as! MiCelda
 
-        cell.titulo.text = posts.objectAtIndex(indexPath.row).valueForKey("cielo_des") as! NSString as String
-        cell.subtitulo.text=posts.objectAtIndex(indexPath.row).valueForKey("fecha") as! NSString as String
+        cell.titulo.text = posts.objectAtIndex(indexPath.row).valueForKey("t_max") as! NSString as String
+        cell.subtitulo.text=posts.objectAtIndex(indexPath.row).valueForKey("t_min") as! NSString as String
+        cell.subtitulo2.text=posts.objectAtIndex(indexPath.row).valueForKey("h_max") as! NSString as String
+        cell.subtitulo3.text=posts.objectAtIndex(indexPath.row).valueForKey("h_min") as! NSString as String
+
         cell.imagen.image=UIImage(named:iconos_i[0])
+        cell.fecha.text=posts.objectAtIndex(indexPath.row).valueForKey("fecha") as! NSString as String
+        cell.ciudad.text="Vitoria-Gasteiz"
+        cell.estado.text="Basque Country, Spain"
             return cell
         } else {
         let cell = tableView.dequeueReusableCellWithIdentifier("MiCelda2", forIndexPath: indexPath) as! MiCelda2

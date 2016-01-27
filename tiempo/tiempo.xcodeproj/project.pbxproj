@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A90ED85C1C569B5C00C5C219 /* Sol.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A90ED85B1C569B5C00C5C219 /* Sol.jpg */; };
 		A933FB401C554C0000A51041 /* noticia.do in Resources */ = {isa = PBXBuildFile; fileRef = A933FB3F1C554C0000A51041 /* noticia.do */; };
-		A933FB441C554EE700A51041 /* localidad_01059.xml in Resources */ = {isa = PBXBuildFile; fileRef = A933FB431C554EE700A51041 /* localidad_01059.xml */; };
+		A933FB441C554EE700A51041 /* localidad_01059_base.xml in Resources */ = {isa = PBXBuildFile; fileRef = A933FB431C554EE700A51041 /* localidad_01059_base.xml */; };
 		A933FB461C556F0900A51041 /* localidad_01059_full.xml in Resources */ = {isa = PBXBuildFile; fileRef = A933FB451C556F0900A51041 /* localidad_01059_full.xml */; };
 		A94EF9FE1C482CDB00FE2043 /* MiCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94EF9FD1C482CDB00FE2043 /* MiCelda.swift */; };
 		A9659DBA1C4588B6007A7F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9659DB91C4588B6007A7F74 /* AppDelegate.swift */; };
@@ -28,6 +28,7 @@
 		A9AD5BE51C5921560081ECDD /* Nubes3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9AD5BDB1C5921560081ECDD /* Nubes3.jpg */; };
 		A9AD5BE61C5921560081ECDD /* Lluvia3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9AD5BDC1C5921560081ECDD /* Lluvia3.jpg */; };
 		A9AD5BE71C5921560081ECDD /* Lluvia4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9AD5BDD1C5921560081ECDD /* Lluvia4.jpg */; };
+		A9AD5BE91C59277D0081ECDD /* localidad_01059.xml in Resources */ = {isa = PBXBuildFile; fileRef = A9AD5BE81C59277D0081ECDD /* localidad_01059.xml */; };
 		A9EF71D91C54E3A300109F51 /* Lluvia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9EF71D81C54E3A300109F51 /* Lluvia.jpg */; };
 		A9EF71DD1C54E98600109F51 /* Sol2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9EF71DC1C54E98600109F51 /* Sol2.jpg */; };
 		A9EF71DF1C54EEAF00109F51 /* Lluvia2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9EF71DE1C54EEAF00109F51 /* Lluvia2.jpg */; };
@@ -39,7 +40,7 @@
 /* Begin PBXFileReference section */
 		A90ED85B1C569B5C00C5C219 /* Sol.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Sol.jpg; path = Imagenes/Sol.jpg; sourceTree = "<group>"; };
 		A933FB3F1C554C0000A51041 /* noticia.do */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = noticia.do; sourceTree = SOURCE_ROOT; };
-		A933FB431C554EE700A51041 /* localidad_01059.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = localidad_01059.xml; sourceTree = SOURCE_ROOT; };
+		A933FB431C554EE700A51041 /* localidad_01059_base.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = localidad_01059_base.xml; sourceTree = SOURCE_ROOT; };
 		A933FB451C556F0900A51041 /* localidad_01059_full.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = localidad_01059_full.xml; sourceTree = SOURCE_ROOT; };
 		A94EF9FD1C482CDB00FE2043 /* MiCelda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiCelda.swift; sourceTree = "<group>"; };
 		A9659DB61C4588B6007A7F74 /* tiempo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiempo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +61,7 @@
 		A9AD5BDB1C5921560081ECDD /* Nubes3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Nubes3.jpg; path = Imagenes/Nubes3.jpg; sourceTree = "<group>"; };
 		A9AD5BDC1C5921560081ECDD /* Lluvia3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lluvia3.jpg; path = Imagenes/Lluvia3.jpg; sourceTree = "<group>"; };
 		A9AD5BDD1C5921560081ECDD /* Lluvia4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lluvia4.jpg; path = Imagenes/Lluvia4.jpg; sourceTree = "<group>"; };
+		A9AD5BE81C59277D0081ECDD /* localidad_01059.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = localidad_01059.xml; sourceTree = SOURCE_ROOT; };
 		A9EF71D81C54E3A300109F51 /* Lluvia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lluvia.jpg; path = Imagenes/Lluvia.jpg; sourceTree = "<group>"; };
 		A9EF71DC1C54E98600109F51 /* Sol2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Sol2.jpg; path = Imagenes/Sol2.jpg; sourceTree = "<group>"; };
 		A9EF71DE1C54EEAF00109F51 /* Lluvia2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lluvia2.jpg; path = Imagenes/Lluvia2.jpg; sourceTree = "<group>"; };
@@ -105,8 +107,9 @@
 		A933FB3E1C554BCE00A51041 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A9AD5BE81C59277D0081ECDD /* localidad_01059.xml */,
 				A933FB451C556F0900A51041 /* localidad_01059_full.xml */,
-				A933FB431C554EE700A51041 /* localidad_01059.xml */,
+				A933FB431C554EE700A51041 /* localidad_01059_base.xml */,
 				A933FB3F1C554C0000A51041 /* noticia.do */,
 			);
 			name = Resource;
@@ -204,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9AD5BE91C59277D0081ECDD /* localidad_01059.xml in Resources */,
 				A9AD5BE41C5921560081ECDD /* Rayo3.jpg in Resources */,
 				A9AD5BDF1C5921560081ECDD /* Nieve1.jpg in Resources */,
 				A9AD5BE31C5921560081ECDD /* Rayo2.jpg in Resources */,
@@ -222,7 +226,7 @@
 				A933FB401C554C0000A51041 /* noticia.do in Resources */,
 				A9AD5BE21C5921560081ECDD /* Sol3.jpg in Resources */,
 				A9EF71DD1C54E98600109F51 /* Sol2.jpg in Resources */,
-				A933FB441C554EE700A51041 /* localidad_01059.xml in Resources */,
+				A933FB441C554EE700A51041 /* localidad_01059_base.xml in Resources */,
 				A9AD5BE71C5921560081ECDD /* Lluvia4.jpg in Resources */,
 				A9EF71E31C54EEBF00109F51 /* Nubes.jpg in Resources */,
 				A9659DBF1C4588B6007A7F74 /* Main.storyboard in Resources */,
