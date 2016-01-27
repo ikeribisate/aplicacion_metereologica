@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ISO-8859-15" ?>
+<root id="01059" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.aemet.es/xsd/localidades.xsd">
+	<origen>
+		<productor>Agencia Estatal de Meteorología - AEMET. Gobierno de España</productor>
+		<web>http://www.aemet.es</web>
+		<enlace>http://www.aemet.es/es/eltiempo/prediccion/municipios/vitoria-gasteiz-id01059</enlace>
+		<language>es</language>
+		<copyright>&#169; AEMET. Autorizado el uso de la información y su reproducción citando a AEMET como autora de la misma.</copyright>
+		<nota_legal>http://www.aemet.es/es/nota_legal</nota_legal>
+	</origen>
+	<elaborado>2016-01-24T11:40:03</elaborado>
+	<nombre>Vitoria-Gasteiz</nombre>
+	<provincia>Araba/Álava</provincia>
+	<prediccion>
+		<dia fecha="2016-01-28">
+			<prob_precipitacion>Esto es la lluvia</prob_precipitacion>
+			<cota_nieve_prov>1300 nieve</cota_nieve_prov>
+			<estado_cielo descripcion="Muy nuboso">15 ahora va a asalir muy nuboso</estado_cielo>
+			<viento>
+				<direccion>SO</direccion>
+				<velocidad>15 vel </velocidad>
+			</viento>
+			<racha_max></racha_max>
+			<temperatura>
+				<maxima>t_maxima</maxima>
+				<minima>t_minima</minima>
+			</temperatura>
+			<sens_termica>
+				<maxima>12</maxima>
+				<minima>4</minima>
+			</sens_termica>
+			<humedad_relativa>
+				<maxima>h_max</maxima>
+				<minima>h_min</minima>
+			</humedad_relativa>
+			<uv_max>2</uv_max>
+		</dia>
+		<dia fecha="2016-01-29">
+			<prob_precipitacion>20</prob_precipitacion>
+			<cota_nieve_prov>1300</cota_nieve_prov>
+			<estado_cielo descripcion="Cubierto">16</estado_cielo>
+			<viento>
+				<direccion>NE</direccion>
+				<velocidad>10</velocidad>
+			</viento>
+			<racha_max></racha_max>
+			<temperatura>
+				<maxima>9</maxima>
+				<minima>5</minima>
+			</temperatura>
+			<sens_termica>
+				<maxima>8</maxima>
+				<minima>4</minima>
+			</sens_termica>
+			<humedad_relativa>
+				<maxima>100</maxima>
+				<minima>80</minima>
+			</humedad_relativa>
+		</dia>
+		<dia fecha="2016-01-30">
+			<prob_precipitacion>40</prob_precipitacion>
+			<cota_nieve_prov></cota_nieve_prov>
+			<estado_cielo descripcion="Nuboso">14</estado_cielo>
+			<viento>
+				<direccion>SO</direccion>
+				<velocidad>5</velocidad>
+			</viento>
+			<racha_max></racha_max>
+			<temperatura>
+				<maxima>12</maxima>
+				<minima>4</minima>
+			</temperatura>
+			<sens_termica>
+				<maxima>12</maxima>
+				<minima>4</minima>
+			</sens_termica>
+			<humedad_relativa>
+				<maxima>100</maxima>
+				<minima>80</minima>
+			</humedad_relativa>
+		</dia>
+        <dia fecha="2016-01-31">
+            <prob_precipitacion>40</prob_precipitacion>
+            <cota_nieve_prov></cota_nieve_prov>
+            <estado_cielo descripcion="Nuboso">14</estado_cielo>
+            <viento>
+                <direccion>SO</direccion>
+                <velocidad>5</velocidad>
+            </viento>
+            <racha_max></racha_max>
+            <temperatura>
+                <maxima>12</maxima>
+                <minima>4</minima>
+            </temperatura>
+            <sens_termica>
+                <maxima>12</maxima>
+                <minima>4</minima>
+            </sens_termica>
+            <humedad_relativa>
+                <maxima>100</maxima>
+                <minima>80</minima>
+            </humedad_relativa>
+        </dia>
+        <dia fecha="2016-01-32">
+            <prob_precipitacion>llueve sobre 40%</prob_precipitacion>
+            <cota_nieve_prov></cota_nieve_prov>
+            <estado_cielo descripcion="Nuboso">14</estado_cielo>
+            <viento>
+                <direccion>SO</direccion>
+                <velocidad>5</velocidad>
+            </viento>
+            <racha_max></racha_max>
+            <temperatura>
+                <maxima>12</maxima>
+                <minima>4</minima>
+            </temperatura>
+            <sens_termica>
+                <maxima>12</maxima>
+                <minima>4</minima>
+            </sens_termica>
+            <humedad_relativa>
+                <maxima>100</maxima>
+                <minima>80</minima>
+            </humedad_relativa>
+        </dia>
+        <dia fecha="2016-01-33">
+            <prob_precipitacion>40</prob_precipitacion>
+            <cota_nieve_prov></cota_nieve_prov>
+            <estado_cielo descripcion="Nuboso">14</estado_cielo>
+            <viento>
+                <direccion>SO</direccion>
+                <velocidad>5</velocidad>
+            </viento>
+            <racha_max></racha_max>
+            <temperatura>
+                <maxima>12</maxima>
+                <minima>4</minima>
+            </temperatura>
+            <sens_termica>
+                <maxima>12</maxima>
+                <minima>4</minima>
+            </sens_termica>
+            <humedad_relativa>
+                <maxima>100</maxima>
+                <minima>80</minima>
+            </humedad_relativa>
+        </dia>
+	</prediccion>
+</root>
