@@ -64,18 +64,16 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
     {
         posts = []
 
-// PENDIENTE .... 1 CONEXION A WEB
-        let url: NSURL! = NSBundle.mainBundle().URLForResource("localidad_01059", withExtension: "xml")
-        //let url = NSURL(string: "http://www.aemet.es/xml/municipios/localidad_01059.xml")
-        
+        // PENDIENTE .... 1 CONEXION A WEB. info.plist
+        //let url: NSURL! = NSBundle.mainBundle().URLForResource("localidad_01059", withExtension: "xml")
         //let url = NSURL(string: "http://images.apple.com/main/rss/hotnews/hotnews.rss")
         //let url: NSURL! = NSBundle.mainBundle().URLForResource("noticia", withExtension: "do")
-
-        
         //parser = NSXMLParser(contentsOfURL:(NSURL(string:"http://images.apple.com/main/rss/hotnews/hotnews.rss"))!)!
         //parser = NSXMLParser(contentsOfURL:(NSURL(string:"http://www.aemet.es/xml/municipios/localidad_01059.xml"))!)!
         //parser = NSXMLParser(contentsOfURL:(NSURL(string:"http://www.w3schools.com/xml/cd_catalog.xml"))!)!
         
+        let url = NSURL(string: "http://www.aemet.es/xml/municipios/localidad_01059.xml")
+       
         parser = NSXMLParser(contentsOfURL:(url)!)!
         parser.delegate = self
         parser.parse()
@@ -278,18 +276,7 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
         //cell.detailTextLabel?.text = "33333333"
         //cell.imageView?.image=UIImage(named:"Lluvia2.jpg")
 
-        let s_fecha = posts.objectAtIndex(indexPath.row).valueForKey("fecha") as! NSString as String
-        let s_lluvia = posts.objectAtIndex(indexPath.row).valueForKey("lluvia") as! NSString as String
-        let s_nieve = posts.objectAtIndex(indexPath.row).valueForKey("nieve") as! NSString as String
-        let s_cielo = posts.objectAtIndex(indexPath.row).valueForKey("cielo") as! NSString as String
-        var s_cielo_des = posts.objectAtIndex(indexPath.row).valueForKey("cielo_des") as! NSString as String
-        var s_v_dir = posts.objectAtIndex(indexPath.row).valueForKey("v_dir") as! NSString as String
-        var s_v_vel = posts.objectAtIndex(indexPath.row).valueForKey("v_vel") as! NSString as String
-        var s_t_max = posts.objectAtIndex(indexPath.row).valueForKey("t_max") as! NSString as String
-        var s_t_min = posts.objectAtIndex(indexPath.row).valueForKey("t_min") as! NSString as String
-        var s_h_max = posts.objectAtIndex(indexPath.row).valueForKey("h_max") as! NSString as String
-        var s_h_min = posts.objectAtIndex(indexPath.row).valueForKey("h_min") as! NSString as String
-        
+        l
         let a = "Hello"
         let b = "World"
         
@@ -297,14 +284,30 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
         let second = "\(a), \(b)"
 */
         
+        //let s_fecha = posts.objectAtIndex(indexPath.row).valueForKey("fecha") as! NSString as String
+        let s_lluvia = posts.objectAtIndex(indexPath.row).valueForKey("lluvia") as! NSString as String
+        //let s_nieve = posts.objectAtIndex(indexPath.row).valueForKey("nieve") as! NSString as String
+        //let s_cielo = posts.objectAtIndex(indexPath.row).valueForKey("cielo") as! NSString as String
+        //let s_cielo_des = posts.objectAtIndex(indexPath.row).valueForKey("cielo_des") as! NSString as String
+        //let s_v_dir = posts.objectAtIndex(indexPath.row).valueForKey("v_dir") as! NSString as String
+        //let s_v_vel = posts.objectAtIndex(indexPath.row).valueForKey("v_vel") as! NSString as String
+        let s_t_max = posts.objectAtIndex(indexPath.row).valueForKey("t_max") as! NSString as String
+        let s_t_min = posts.objectAtIndex(indexPath.row).valueForKey("t_min") as! NSString as String
+        //let s_h_max = posts.objectAtIndex(indexPath.row).valueForKey("h_max") as! NSString as String
+        //let s_h_min = posts.objectAtIndex(indexPath.row).valueForKey("h_min") as! NSString as String
+        var etq=""
+
+// PENDIENTE .... 5 UNIR STRINGS EN UN LABEL
         if indexPath.row == 0 {
         let cell = tableView.dequeueReusableCellWithIdentifier("MiCelda", forIndexPath: indexPath) as! MiCelda
 
         cell.titulo.text = posts.objectAtIndex(indexPath.row).valueForKey("cielo_des") as! NSString as String
-        cell.subtitulo.text=posts.objectAtIndex(indexPath.row).valueForKey("t_min") as! NSString as String
-        cell.subtitulo2.text=posts.objectAtIndex(indexPath.row).valueForKey("h_max") as! NSString as String
-        cell.subtitulo3.text=posts.objectAtIndex(indexPath.row).valueForKey("h_min") as! NSString as String
-
+        etq = "Probabilidad de lluvia "
+        cell.subtitulo.text=etq + " % : " + s_lluvia
+        etq = "Temperatura "
+        cell.subtitulo2.text=etq + "Maxima ºC:  " + s_t_max
+        cell.subtitulo3.text=etq + "Minima ºC:  " + s_t_min
+            
         cell.imagen.image=UIImage(named:iconos_i[0])
         cell.fecha.text=posts.objectAtIndex(indexPath.row).valueForKey("fecha") as! NSString as String
         cell.ciudad.text="Vitoria-Gasteiz"
@@ -316,27 +319,27 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
         cell.textLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("cielo_des") as! NSString as String
         cell.detailTextLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("fecha") as! NSString as String
         //cell.imageView?.image=UIImage(named:iconos[0])
-        //cell.imageView?.image=UIImage(named:"Nube.jpg")
+        
+            //cell.imageView?.image=UIImage(named:"Nieve.jpg")
             for (index, value) in iconos_c.enumerate() {
 // PENDIENTE .... 4 BUSCAR EN EL array
                 if value == posts.objectAtIndex(indexPath.row).valueForKey("cielo") as! NSString as String
-                //if value == "14"
                 {
                     cell.imageView?.image=UIImage(named:iconos_i[index])
                 }
             }
-
+            /*
             if indexPath.row == 3 {
                 
-// PENDIENTE .... 5 UNIR STRINGS EN UN LABEL
-                
                 let a = ".........................."
-                let b : String = posts.objectAtIndex(indexPath.row).valueForKey("cielo") as! NSString as String
-                let c = b + ", " + a
-                cell.textLabel?.text = "Aqui probamos ......"
-                cell.detailTextLabel?.text = "\(a) : \(b)"
+                let b : String = posts.objectAtIndex(indexPath.row).valueForKey("cielo") as! String
+
+                //let c = b + ", " + a
+                cell.textLabel?.text = "\(a) : \(b)"
+                cell.detailTextLabel?.text = " \(b) : \(a)"
                 cell.imageView?.image=UIImage(named:"Lluvia3.jpg")
             }
+           */
             return cell
         }
         
@@ -344,9 +347,9 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     if (indexPath.row == 0) {
-        return 200; //200
+        return 230; //200
     } else {
-        return 60; //60
+        return 90; //60
     }
     }
     
