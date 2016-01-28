@@ -29,6 +29,7 @@
 		A9AD5BE61C5921560081ECDD /* Lluvia3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9AD5BDC1C5921560081ECDD /* Lluvia3.jpg */; };
 		A9AD5BE71C5921560081ECDD /* Lluvia4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9AD5BDD1C5921560081ECDD /* Lluvia4.jpg */; };
 		A9AD5BE91C59277D0081ECDD /* localidad_01059.xml in Resources */ = {isa = PBXBuildFile; fileRef = A9AD5BE81C59277D0081ECDD /* localidad_01059.xml */; };
+		A9AD5BEB1C5930540081ECDD /* localidad_01059_periodo.xml in Resources */ = {isa = PBXBuildFile; fileRef = A9AD5BEA1C5930540081ECDD /* localidad_01059_periodo.xml */; };
 		A9EF71D91C54E3A300109F51 /* Lluvia.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9EF71D81C54E3A300109F51 /* Lluvia.jpg */; };
 		A9EF71DD1C54E98600109F51 /* Sol2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9EF71DC1C54E98600109F51 /* Sol2.jpg */; };
 		A9EF71DF1C54EEAF00109F51 /* Lluvia2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9EF71DE1C54EEAF00109F51 /* Lluvia2.jpg */; };
@@ -62,6 +63,7 @@
 		A9AD5BDC1C5921560081ECDD /* Lluvia3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lluvia3.jpg; path = Imagenes/Lluvia3.jpg; sourceTree = "<group>"; };
 		A9AD5BDD1C5921560081ECDD /* Lluvia4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lluvia4.jpg; path = Imagenes/Lluvia4.jpg; sourceTree = "<group>"; };
 		A9AD5BE81C59277D0081ECDD /* localidad_01059.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = localidad_01059.xml; sourceTree = SOURCE_ROOT; };
+		A9AD5BEA1C5930540081ECDD /* localidad_01059_periodo.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = localidad_01059_periodo.xml; sourceTree = SOURCE_ROOT; };
 		A9EF71D81C54E3A300109F51 /* Lluvia.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lluvia.jpg; path = Imagenes/Lluvia.jpg; sourceTree = "<group>"; };
 		A9EF71DC1C54E98600109F51 /* Sol2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Sol2.jpg; path = Imagenes/Sol2.jpg; sourceTree = "<group>"; };
 		A9EF71DE1C54EEAF00109F51 /* Lluvia2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Lluvia2.jpg; path = Imagenes/Lluvia2.jpg; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				A9AD5BE81C59277D0081ECDD /* localidad_01059.xml */,
+				A9AD5BEA1C5930540081ECDD /* localidad_01059_periodo.xml */,
 				A933FB451C556F0900A51041 /* localidad_01059_full.xml */,
 				A933FB431C554EE700A51041 /* localidad_01059_base.xml */,
 				A933FB3F1C554C0000A51041 /* noticia.do */,
@@ -213,6 +216,7 @@
 				A9AD5BE31C5921560081ECDD /* Rayo2.jpg in Resources */,
 				A90ED85C1C569B5C00C5C219 /* Sol.jpg in Resources */,
 				A9AD5BDE1C5921560081ECDD /* Nieve.jpg in Resources */,
+				A9AD5BEB1C5930540081ECDD /* localidad_01059_periodo.xml in Resources */,
 				A933FB461C556F0900A51041 /* localidad_01059_full.xml in Resources */,
 				A9AD5BE01C5921560081ECDD /* Nubes2.jpg in Resources */,
 				A9AD5BE11C5921560081ECDD /* Nubes4.jpg in Resources */,

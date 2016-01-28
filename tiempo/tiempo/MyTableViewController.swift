@@ -31,6 +31,7 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
     var sw=""
     var periodo=""
     var cielo_d=""
+    var p=""
     var prueba="N A D A"
     var ifDirOK = false
     
@@ -38,7 +39,7 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
                                    "11","11n",
                                    "12","12n",
                                    "14","14c",
-                                   "27","15c"]
+                                   "15","15c"]
     var iconos_i:Array <String> = ["Nieve.jpg" ,"Nieve.jpg",
                                    "Sol2.jpg"  ,"Sol2.jpg",
                                    "Nubes4.jpg","Nubes4.jpg",
@@ -60,7 +61,8 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
     func beginParsing()
     {
         posts = []
-        
+
+// PENDIENTE .... 1 CONEXION A WEB
         let url: NSURL! = NSBundle.mainBundle().URLForResource("localidad_01059", withExtension: "xml")
         //let url = NSURL(string: "http://www.aemet.es/xml/municipios/localidad_01059.xml")
         
@@ -98,6 +100,7 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
             cielo = ""
             cielo_des = NSMutableString()
             cielo_des = ""
+            p=""
             v_dir = NSMutableString()
             v_dir = ""
             v_vel = NSMutableString()
@@ -118,19 +121,24 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
                 (elementName as NSString).isEqualToString("cota_nieve_prov")    ||
                 (elementName as NSString).isEqualToString("estado_cielo")
         {
-            periodo="18-24"
+            periodo="00-24"
+// PENDIENTE .... 6 PREGUNTAR POR UN ATRIBUTO QUE NO EXISTE
             //periodo=attributeDict["periodo"]!
-            //if !attributeDict["periodo"]!.isEqual(nil){
+
+            //if !attributeDict["periodo"]!.isEmpty 
+            //if let item = attributeDict["periodo"]!
+            //{
             //    periodo=attributeDict["periodo"]!
             //}
-
-            //if qName != nil {
-            //    periodo=attributeDict["periodo"]!  // no funcionasiempre es nill
-            //}
             
-            if (elementName as NSString).isEqualToString("estado_cielo") && (periodo == "18-24") {
-                cielo_d=attributeDict["descripcion"]!
-                //cielo_des.appendString(attributeDict["descripcion"]!)
+            if (elementName as NSString).isEqualToString("estado_cielo") && (periodo == "00-24") {
+                if p == "" {
+                    if !attributeDict["descripcion"]!.isEmpty {
+                        cielo_d=attributeDict["descripcion"]!
+                        //cielo_des.appendString(attributeDict["descripcion"]!)
+                        p="S"
+                      }
+                 }
             }
         }
         else if (elementName as NSString).isEqualToString("temperatura")
@@ -147,7 +155,8 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
         }
     }
     
-    //-------
+//-------
+// PENDIENTE .... 6 PREGUNTAR POR UN ATRIBUTO QUE NO EXISTE
     func parser(parser: NSXMLParser, foundAttributeDeclarationWithName attributeName: String, forElement elementName: String, type: String?, defaultValue: String?) {
         if (ifDirOK){
             print("\(attributeName)")
@@ -169,7 +178,7 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
         }
 
     }
-    //-------
+//-------
     
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?)
     {
@@ -217,11 +226,11 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
     {
         
         
-        if element.isEqualToString("prob_precipitacion") && (periodo == "18-24"){
+        if element.isEqualToString("prob_precipitacion") && (periodo == "00-24"){
             lluvia.appendString(string)
-        } else if element.isEqualToString("cota_nieve_prov") && (periodo == "18-24"){
+        } else if element.isEqualToString("cota_nieve_prov") && (periodo == "00-24"){
             nieve.appendString(string)
-        } else if element.isEqualToString("estado_cielo") && (periodo == "18-24"){
+        } else if element.isEqualToString("estado_cielo") && (periodo == "00-24"){
             cielo.appendString(string)
             cielo_des.appendString(cielo_d)
             cielo_d=""
@@ -289,7 +298,7 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
         if indexPath.row == 0 {
         let cell = tableView.dequeueReusableCellWithIdentifier("MiCelda", forIndexPath: indexPath) as! MiCelda
 
-        cell.titulo.text = posts.objectAtIndex(indexPath.row).valueForKey("t_max") as! NSString as String
+        cell.titulo.text = posts.objectAtIndex(indexPath.row).valueForKey("cielo_des") as! NSString as String
         cell.subtitulo.text=posts.objectAtIndex(indexPath.row).valueForKey("t_min") as! NSString as String
         cell.subtitulo2.text=posts.objectAtIndex(indexPath.row).valueForKey("h_max") as! NSString as String
         cell.subtitulo3.text=posts.objectAtIndex(indexPath.row).valueForKey("h_min") as! NSString as String
@@ -305,21 +314,24 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
         cell.textLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("cielo_des") as! NSString as String
         cell.detailTextLabel?.text = posts.objectAtIndex(indexPath.row).valueForKey("fecha") as! NSString as String
         //cell.imageView?.image=UIImage(named:iconos[0])
-            
-            if indexPath.row == 3 {
-          //      cell.imageView?.image=UIImage(named:"Nube.jpg")
-                for (index, value) in iconos_c.enumerate() {
-                    if value == posts.objectAtIndex(indexPath.row).valueForKey("cielo") as! String {
-                       cell.imageView?.image=UIImage(named:iconos_i[index])
-                    }
+        //cell.imageView?.image=UIImage(named:"Nube.jpg")
+            for (index, value) in iconos_c.enumerate() {
+// PENDIENTE .... 4 BUSCAR EN EL array
+                if value == posts.objectAtIndex(indexPath.row).valueForKey("cielo") as! NSString as String
+                //if value == "14"
+                {
+                    cell.imageView?.image=UIImage(named:iconos_i[index])
                 }
-               
+            }
+
+            if indexPath.row == 3 {
+                
+// PENDIENTE .... 5 UNIR STRINGS EN UN LABEL
+                
                 let a = ".........................."
-                let b = posts.objectAtIndex(indexPath.row).valueForKey("cielo") as! NSString as String
-                //var c = NSMutableString()
-                //c.appendString(b)as!
-                //c.appendString;(a)
-                cell.textLabel?.text = prueba
+                let b : String = posts.objectAtIndex(indexPath.row).valueForKey("cielo") as! NSString as String
+                let c = b + ", " + a
+                cell.textLabel?.text = "Aqui probamos ......"
                 cell.detailTextLabel?.text = "\(a) : \(b)"
             
             }
@@ -330,9 +342,9 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     if (indexPath.row == 0) {
-        return 200;
+        return 200; //200
     } else {
-        return 60;
+        return 60; //60
     }
     }
     

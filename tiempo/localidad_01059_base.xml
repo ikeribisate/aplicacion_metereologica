@@ -145,5 +145,27 @@
                 <minima>80</minima>
             </humedad_relativa>
         </dia>
+        <dia fecha="2016-01-34">
+            <prob_precipitacion>40</prob_precipitacion>
+            <cota_nieve_prov></cota_nieve_prov>
+            <estado_cielo descripcion="Nuboso">14</estado_cielo>
+            <viento>
+                <direccion>SO</direccion>
+                <velocidad>5</velocidad>
+            </viento>
+            <racha_max></racha_max>
+            <temperatura>
+                <maxima>12</maxima>
+                <minima>4</minima>
+            </temperatura>
+            <sens_termica>
+                <maxima>12</maxima>
+                <minima>4</minima>
+            </sens_termica>
+            <humedad_relativa>
+                <maxima>100</maxima>
+                <minima>80</minima>
+            </humedad_relativa>
+        </dia>
 	</prediccion>
 </root>
