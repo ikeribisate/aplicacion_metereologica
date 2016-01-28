@@ -35,12 +35,14 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
     var prueba="N A D A"
     var ifDirOK = false
     
-    var iconos_c:Array <String> = ["00","00n",
+    var iconos_c:Array <String> = ["99","99n",
+                                   "00","00n",
                                    "11","11n",
                                    "12","12n",
                                    "14","14c",
                                    "15","15c"]
-    var iconos_i:Array <String> = ["Nieve.jpg" ,"Nieve.jpg",
+    var iconos_i:Array <String> = ["Lluvia4.jpg" ,"Lluvia4.jpg",
+                                   "Nieve.jpg" ,"Nieve.jpg",
                                    "Sol2.jpg"  ,"Sol2.jpg",
                                    "Nubes4.jpg","Nubes4.jpg",
                                    "Nubes3.jpg","Nubes3.jpg",
@@ -333,7 +335,7 @@ class MyTableViewController: UITableViewController, NSXMLParserDelegate
                 let c = b + ", " + a
                 cell.textLabel?.text = "Aqui probamos ......"
                 cell.detailTextLabel?.text = "\(a) : \(b)"
-            
+                cell.imageView?.image=UIImage(named:"Lluvia3.jpg")
             }
             return cell
         }
